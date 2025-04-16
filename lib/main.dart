@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/data/restaurant_data.dart';
 import 'package:myapp/ui/_core/app_theme.dart';
 import 'package:myapp/ui/splash/splash_screen.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(App());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  RestaurantData restaurantData = RestaurantData();
+  await restaurantData.getRestaurants();
+
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (context) => restaurantData)],
+      child: App(),
+    ),
+  );
 }
 
 class App extends StatelessWidget {
