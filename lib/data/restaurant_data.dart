@@ -8,7 +8,9 @@ class RestaurantData extends ChangeNotifier {
   List<Restaurant> listRestaurant = [];
 
   Future<void> getRestaurants() async {
-    String jsonString = await rootBundle.loadString('assets/data.json');
+    String jsonString = await rootBundle.loadString(
+      'assets/restaurant_data.json',
+    );
     Map<String, dynamic> data = json.decode(jsonString);
     List<dynamic> restaurantsData = data['restaurants'];
 
