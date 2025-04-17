@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/model/category.dart';
 import 'package:myapp/ui/_core/app_colors.dart';
 
 class CategoryWidget extends StatelessWidget {
-  final String category;
+  final Category category;
 
   const CategoryWidget({super.key, required this.category});
 
@@ -22,11 +23,11 @@ class CategoryWidget extends StatelessWidget {
         spacing: 8,
         children: [
           Image.asset(
-            'assets/categories/${category.toLowerCase()}.png',
+            'assets/categories/${category.name.toLowerCase()}.png',
             height: 48,
           ),
           Text(
-            category,
+            category.name,
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
         ],
