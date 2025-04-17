@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/ui/_core/bag_provider.dart';
+import 'package:myapp/ui/checkout/checkout_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:badges/badges.dart' as badges;
 
@@ -40,7 +41,12 @@ class _TechTasteAppBarState extends State<TechTasteAppBar> {
           ),
           child: IconButton(
             icon: const Icon(Icons.shopping_bag),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CheckoutScreen()),
+              );
+            },
           ),
         ),
       ],
