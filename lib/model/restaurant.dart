@@ -1,3 +1,4 @@
+import 'package:myapp/model/category.dart';
 import 'package:myapp/model/dish.dart';
 
 class Restaurant {
@@ -7,7 +8,7 @@ class Restaurant {
   final String description;
   final double stars;
   final int distance;
-  final List<String> categories;
+  final List<Category> categories;
   final List<Dish> dishes;
 
   Restaurant({
@@ -39,7 +40,9 @@ class Restaurant {
     description: map['description'],
     stars: map['stars'],
     distance: map['distance'],
-    categories: List<String>.from(map['categories']),
+    categories: List<Category>.from(
+      map['categories'].map((category) => Category.fromMap(category)),
+    ),
     dishes: List<Dish>.from(map['dishes'].map((dish) => Dish.fromMap(dish))),
   );
 
