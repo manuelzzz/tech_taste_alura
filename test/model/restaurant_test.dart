@@ -9,7 +9,10 @@ void main() {
     'description': 'Restaurant Description',
     'stars': 4.5,
     'distance': 500,
-    'categories': ['Category 1', 'Category 2'],
+    'categories': [
+      {'id': '1', 'name': 'Category 1'},
+      {'id': '2', 'name': 'Category 2'},
+    ],
     'dishes': [
       {
         'id': '1',
@@ -30,7 +33,11 @@ void main() {
     expect(restaurant.description, 'Restaurant Description');
     expect(restaurant.stars, 4.5);
     expect(restaurant.distance, 500);
-    expect(restaurant.categories, ['Category 1', 'Category 2']);
+    expect(restaurant.categories.length, 2);
+    expect(restaurant.categories[0].id, '1');
+    expect(restaurant.categories[0].name, 'Category 1');
+    expect(restaurant.categories[1].id, '2');
+    expect(restaurant.categories[1].name, 'Category 2');
     expect(restaurant.dishes.length, 1);
     expect(restaurant.dishes[0].id, '1');
     expect(restaurant.dishes[0].imagePath, 'path/to/dish_image.jpg');
@@ -49,7 +56,11 @@ void main() {
     expect(output['description'], 'Restaurant Description');
     expect(output['stars'], 4.5);
     expect(output['distance'], 500);
-    expect(output['categories'], ['Category 1', 'Category 2']);
+    expect(output['categories'].length, 2);
+    expect(output['categories'][0]['id'], '1');
+    expect(output['categories'][0]['name'], 'Category 1');
+    expect(output['categories'][1]['id'], '2');
+    expect(output['categories'][1]['name'], 'Category 2');
     expect(output['dishes'].length, 1);
     expect(output['dishes'][0]['id'], '1');
     expect(output['dishes'][0]['imagePath'], 'path/to/dish_image.jpg');
