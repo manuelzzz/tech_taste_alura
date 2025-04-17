@@ -5,7 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:myapp/model/restaurant.dart';
 
 class RestaurantData extends ChangeNotifier {
-  List<Restaurant> listRestaurant = [];
+  final List<Restaurant> _listRestaurant = [];
+
+  List<Restaurant> get listRestaurant => _listRestaurant;
 
   Future<void> getRestaurants() async {
     String jsonString = await rootBundle.loadString(
@@ -16,7 +18,7 @@ class RestaurantData extends ChangeNotifier {
 
     for (final restaurant in restaurantsData) {
       Restaurant convertedRestaurant = Restaurant.fromMap(restaurant);
-      listRestaurant.add(convertedRestaurant);
+      _listRestaurant.add(convertedRestaurant);
     }
   }
 }
