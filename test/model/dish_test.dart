@@ -5,6 +5,7 @@ void main() {
   final dishMap = {
     'id': '1',
     'imagePath': 'path/to/image.jpg',
+    'name': 'Dish name',
     'description': 'Dish Description',
     'price': 100,
   };
@@ -14,6 +15,7 @@ void main() {
 
     expect(dish.id, '1');
     expect(dish.imagePath, 'path/to/image.jpg');
+    expect(dish.name, 'Dish name');
     expect(dish.description, 'Dish Description');
     expect(dish.price, 100);
   });
@@ -24,6 +26,7 @@ void main() {
 
     expect(output['id'], '1');
     expect(output['imagePath'], 'path/to/image.jpg');
+    expect(output['name'], 'Dish name');
     expect(output['description'], 'Dish Description');
     expect(output['price'], 100);
   });

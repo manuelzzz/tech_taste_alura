@@ -14,6 +14,7 @@ void main() {
       {
         'id': '1',
         'imagePath': 'path/to/dish_image.jpg',
+        'name': 'Dish Name',
         'description': 'Dish Description',
         'price': 100,
       },
@@ -33,6 +34,7 @@ void main() {
     expect(restaurant.dishes.length, 1);
     expect(restaurant.dishes[0].id, '1');
     expect(restaurant.dishes[0].imagePath, 'path/to/dish_image.jpg');
+    expect(restaurant.dishes[0].name, 'Dish Name');
     expect(restaurant.dishes[0].description, 'Dish Description');
     expect(restaurant.dishes[0].price, 100);
   });
@@ -51,6 +53,7 @@ void main() {
     expect(output['dishes'].length, 1);
     expect(output['dishes'][0]['id'], '1');
     expect(output['dishes'][0]['imagePath'], 'path/to/dish_image.jpg');
+    expect(output['dishes'][0]['name'], 'Dish Name');
     expect(output['dishes'][0]['description'], 'Dish Description');
     expect(output['dishes'][0]['price'], 100);
   });
