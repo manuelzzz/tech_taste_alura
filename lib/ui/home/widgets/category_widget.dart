@@ -9,8 +9,8 @@ class CategoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100,
-      height: 100,
+      width: 110,
+      height: 110,
       decoration: BoxDecoration(
         color: AppColors.lightBackgroundColor,
         borderRadius: BorderRadius.circular(12),
