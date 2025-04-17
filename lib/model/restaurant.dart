@@ -29,7 +29,7 @@ class Restaurant {
     'description': description,
     'stars': stars,
     'distance': distance,
-    'categories': categories,
+    'categories': categories.map((category) => category.toMap()).toList(),
     'dishes': dishes.map((dish) => dish.toMap()).toList(),
   };
 
