@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/data/categories_data.dart';
+import 'package:myapp/data/category_data.dart';
 import 'package:myapp/data/restaurant_data.dart';
 import 'package:myapp/ui/_core/widgets/tech_taste_app_bar.dart';
 import 'package:myapp/ui/home/widgets/category_widget.dart';
@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final restaurantData = Provider.of<RestaurantData>(context);
+    final categoriesData = Provider.of<CategoryData>(context);
 
     return Scaffold(
       drawer: Drawer(),
@@ -40,9 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   spacing: 8,
                   children: List.generate(
-                    CategoriesData.listCategories.length,
+                    categoriesData.listCategory.length,
                     (index) => CategoryWidget(
-                      category: CategoriesData.listCategories[index],
+                      category: categoriesData.listCategory[index],
                     ),
                   ),
                 ),
