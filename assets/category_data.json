@@ -1,0 +1,9 @@
+{
+    "categories": [
+        { "id": "9ed4eeac-a277-4280-9eeb-3ebc82635c31", "name": "Petiscos" },
+        { "id": "8a43c516-f801-4f53-ab81-a47a4adf9c8a", "name": "Principais" },
+        { "id": "247bdaa8-3b8a-4779-816b-33721436526d", "name": "Massas" },
+        { "id": "de5797c8-0474-4009-a2f6-44c96cd3df06", "name": "Sobremesas" },
+        { "id": "89fdae94-1841-4928-9232-9e0d956056cd", "name": "Bebidas" }
+    ]
+}

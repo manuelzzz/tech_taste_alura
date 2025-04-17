@@ -8,8 +8,8 @@
             "stars": 4.3,
             "distance": 2,
             "categories": [
-                "Principais",
-                "Petiscos"
+                { "id": "8a43c516-f801-4f53-ab81-a47a4adf9c8a", "name": "Principais" },
+                { "id": "9ed4eeac-a277-4280-9eeb-3ebc82635c31", "name": "Petiscos" }
             ],
             "dishes": [
                 {
@@ -57,8 +57,8 @@
             "stars": 4.7,
             "distance": 3,
             "categories": [
-                "Petiscos",
-                "Bebidas"
+                { "id": "9ed4eeac-a277-4280-9eeb-3ebc82635c31", "name": "Petiscos" },
+                { "id": "89fdae94-1841-4928-9232-9e0d956056cd", "name": "Bebidas" }
             ],
             "dishes": [
                 {
@@ -106,8 +106,8 @@
             "stars": 5.0,
             "distance": 1,
             "categories": [
-                "Principais",
-                "Bebidas"
+                { "id": "8a43c516-f801-4f53-ab81-a47a4adf9c8a", "name": "Principais" },
+                { "id": "89fdae94-1841-4928-9232-9e0d956056cd", "name": "Bebidas" }
             ],
             "dishes": [
                 {
@@ -155,8 +155,8 @@
             "stars": 4.8,
             "distance": 4,
             "categories": [
-                "Sobremesas",
-                "Massas"
+                { "id": "de5797c8-0474-4009-a2f6-44c96cd3df06", "name": "Sobremesas" },
+                { "id": "247bdaa8-3b8a-4779-816b-33721436526d", "name": "Massas" }
             ],
             "dishes": [
                 {
@@ -204,9 +204,9 @@
             "stars": 4.9,
             "distance": 1,
             "categories": [
-                "Principais",
-                "Petiscos",
-                "Bebidas"
+                { "id": "8a43c516-f801-4f53-ab81-a47a4adf9c8a", "name": "Principais" },
+                { "id": "9ed4eeac-a277-4280-9eeb-3ebc82635c31", "name": "Petiscos" },
+                { "id": "89fdae94-1841-4928-9232-9e0d956056cd", "name": "Bebidas" }
             ],
             "dishes": [
                 {
